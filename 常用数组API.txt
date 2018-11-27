@@ -1,0 +1,153 @@
+常用数组API：
+
+1:数组转换字符串 2个
+ 1.1: var str = arr.toString();
+      //输出数组中所有元素，并且用逗号分隔
+ 1.2: var str = arr.join("连接符");
+      //功能与上面toString()相近
+      //区别{逗号分隔} 指定连接符
+
+2:连接数组:
+      var newArr = arr.concat(值1,值2,...,arr2); 
+      #不会修改原有数组,返回新数组
+      #必须用新变量接收
+
+3:获得子数组
+    var subArr = arr.slice(start,end+1);
+    start:开始位置的下标
+    end  :结束位置的下标
+    var arr = [1,2,3,4,5,6,7,8,9];
+    //         0 1 2 3 4 5 6 7 8
+    var newArr = arr.slice(0,3);
+    console.log(newArr);
+    start 支持负数..
+    var newArr = arr.slice(-5,-1);
+    #如果是负数 数组元素个数-5
+    #-5    -1
+    #9-5  9-1
+    #4     8
+
+4:颠倒数组元素
+    var newArr = arr.reverse();
+5:排序
+    #默认将元素转换字符串升序
+    var newArr = arr.sort(); 
+    创建比较器函数
+    function compare(a,b){
+      return b-a;
+    } 
+    arr.sort(compare);
+6:splice 删除 插入 替换 -- 直接修改原数组
+    
+    1:删除
+     var deleted =  arr.splice(start,n);
+     start   开始位置
+     n       删除个数
+     deleted 删除元素
+    2:添加{插入}
+     arr.splice(start,0,值1,值2,...);
+     start 开始插入位置
+     0     不删除
+     值1,值2...  在start位置新添加元素 
+    3:替换
+     arr.splice(start,n,值1,值2.,,,);
+     
+   区分:
+   1:splice 只使用二个参数  删除
+   2:多参数 第二个参数值0   添加
+   3:       第二个参数值非0 替换
+
+
+ 7:length 属性
+    获取数组中有几个元素
+    作用:
+    1:遍历数组可以使用它,作为循环结束条件
+ 8:开头封闭:结尾添加取出数{入栈，出栈}
+     push(值1); 入栈
+     pop();   出栈
+ 9:结尾封闭:开头添加取出数
+     [1,2,3,4,5)
+     unshift(值1);
+     shift();
+   队列
+      只能从一端进入，必须从另一端出
+      []
+   结尾入队列:   push();
+   从开头出队列: shift();
+10：form()
+	把类数组对象和可遍历对象转化为数组，返回新数组
+11：of()
+	把一组值转化为数组
+12：copyWithin()
+	将指定位置的成员复制到其他位置（会覆盖原有成员），然后返回当前数组
+13:find()
+	找出第一个符合条件的数组成员,它的参数是一个回调函数，所有数组成员依次执行该回调函数，直到找出第一个返回值为true的成员，然后返回该成员。如果没有符合条件的成员，则返回undefined。
+13:findIndex()  
+	与find方法非常类似,返回第一个符合条件的数组成员的位置，如果所有成员都不符合条件，则返回-1。
+14:fill()
+	使用给定值，填充一个数组
+15:entries()，keys()和values()
+	用for...of循环进行遍历数组,keys()是对键名的遍历、values()是对键值的遍历，entries()是对键值对的遍历
+16:includes()
+	某个数组是否包含给定的值,包含返回true，否则返回false
+17：map()、filter()、some()、every()
+	分别是遍历，映射（回调函数return新数组），筛选（过滤不符合的返回新数组），存在满足判断（只要至少有一个满足条件就返回true），全部满足判断（必须全部满足条件才会返回true）
+	第一个参数是一个回调函数，对于数组的每一个元素，它都会执行这个回调函数 ，而且这个回调函数有默认的参数 ，分别是数组元素、数组索引、数组引用，数组引用就是数组自身的引用 
+18：索引查寻indexOf()与lastIndexOf()
+	返回第一个找到的索引值，找不到返回-1，分别是前后查找
+19：浓缩reduce()与reduceRight()
+	类似递归，不断减少元素，最后得到一个值，回调函数参数分别是之前值、当前值、数组索引、数组引用 ，reduceRight()是从右向左，其他一样
+20：forEach()
+	语法：array.forEach(function(currentValue, index, arr), thisValue)，currentValue，必需。当前元素；index，可选。当前元素的索引值；arr，可选。当前元素所属的数组对象。
+	thisValue，可选，传递给函数的值一般用 "this" 值。如果这个参数为空， "undefined" 会传递给 "this" 值
+	
+
+***字符串:
+1:字符串原理:
+    底层原理:由多个字符组成的只读数组
+    只读:所有API，都不能直接修改原来字符串，必须
+         返回新字符串..
+    str[0];
+    str.length;
+    str.slice(start,end+1);     
+
+2:字符串API
+    1:大小写转换
+     var newString  =  str.toUpperCase(); 
+     --将变量中str所有字母转大写
+     var newString =   str.toLowerCase(); 
+     --将变量中str所有字母转小写
+     何时使用:大小写均可使用{一视同仁}时
+    2:获得指定位字符
+     var c = str[i];
+     var c = str.charAt(i);  #建议大家用底下
+     获得指定位置字符unicode编码
+     var unicode = str.charCodeAt(i);
+     var c = String.fromCharCode(unicode);
+
+     97 unicode <-->   'a'
+     98                'b'
+     ...
+    3:检索敏感词位置
+      var i = str.indexOf("敏感词"[,fromi]);
+      默认从0位置开始查找,敏感词
+      如果找到返回第一个字符位置下标;
+      没找到返回 -1
+      lastIndexOf(substr[,start]) ，返回 substr 在字符串 str 中最后出现的位置,从 start 位置 向前开始查找，如果不存在，则返回 -1。
+4:获取子字符串
+    str.slice(start,end+1);  //支持负数
+    str.substring(start,end+1); //不支持负数
+    str.substr(start[,end]) //返回 str 中从指定位置开始到指定长度的子字符串，start可为负值
+5:切割字符串
+    var str = "abc;bcd;def";
+    var arr = str.split("分割符");
+    ["abc","bcd","def"]
+      0     1     2
+6: replace()
+	替换字符串，str.replace(被替换的，新的代替者)
+7. search()
+	查找 str 与一个正则表达式是否匹配。如果匹配成功，则返回正则表达式在字符串中首次匹配项的索引；否则，返回 -1。
+8. match()
+	返回一个包含匹配结果的数组，如果没有匹配项，则返回 null。
+9：trim()
+	去除 str 开头和结尾处的空白字符，返回 str 的一个副本，不影响字符串本身的值
