@@ -1,0 +1,2 @@
+1、深拷贝，浅拷贝问题，当setState时候，不能同时设置同一个值给两个state，如果需要使用深拷贝。
+2、const newArr=oldArr.map(v=>[v.a1,v.a2]);返回一个二维数组，原数组为oldArr=[{a1:1,a2:2},{a1:8,a2:9}];
