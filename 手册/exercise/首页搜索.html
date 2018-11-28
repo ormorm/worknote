@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>搜索框</title>
+    <!--meta:vp-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <!--meta:compat-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <!--jq-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <!--库-->
+    <script src="js/bootstrap.js"></script>
+    <!--特效-->
+    <!--cc:ie6--><!-- l less  t  than  e equals-->
+    <!--[if lte IE 8]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/search-style.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="row"> 
+            <div id="search_box" class="col-xs-12">
+                <!--form搜索框-->
+                <div>
+                    <div class="input-group">
+                        <!--<div class="search_context align-right">
+                            <span class="product">产品</span><input class="text" type="text"><button class="button" type="submit" value="搜索"><i class="fa fa-search"></i>搜索</button>
+                        </div>-->
+                        <div id="scopeOptionDiv" class="dropdown dropdown-accordion input-group-btn hidden-scope-ddl" data-accordion="#accordion">
+                            <label name="scopeOptions" tabindex="101" class="btn dropdown-toggle scope-search-button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="caret-text">产品</span>
+                                    <span class="caret"></span>
+                            </label>
+                            <ul class="dropdown-menu scope-options">
+                                <li><a href="javascript:void(0)">产品</a></li>
+                                <li><a href="javascript:void(0)">类别</a></li>
+                            </ul>
+                        </div>
+                        <input type="text" id="headerSearchKeyword" name="keyword" class="search-text form-control header-search-box js-search-autosuggest" title="物料编号/关键字" autocorrect="off" autocapitalize="off" placeholder='物料编号/关键字' />
+                        <div class="input-group-btn">
+                            <a href="javascript:void(0)" id="search_button" tabindex="100" class="btn btn-default headerSearchButton search-button" title="搜索">
+                                <i class="fa fa-search" aria-hidden="true"></i>搜索
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="align-right ">
+                        <label title="" class="raido-label">
+                            <input type="checkbox" id="stocked" name="stocked" value="stocked" />
+                            有库存
+                        </label>
+                        <label title="" class="raido-label">
+                            <input type="checkbox" id="rohs" name="rohs" value="rohs" />
+                            符合RoHS
+                        </label>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+http://cnodejs.org/topic/56ef3edd532839c33a99d00e   很全的前端学习资源
+http://www.cnblogs.com/armyfai/p/3985660.html        熟悉svn
+各种样式的弹框 http://sciactive.com/pnotify/#demos-simple
+http://www.cnblogs.com/suoning/p/5656403.html
+
+https://www.angular.cn/      NG网址
+Chrome调试工具：http://mp.weixin.qq.com/s?__biz=MzAwNDcyNjI3OA==&mid=2650838945&idx=1&sn=90d1c6b8011f31296153f2914bfd21c4&scene=0#wechat_redirect
+http://pinggod.com/2016/Typescript/    typescript网址
+http://arnique.net/web-design/58/a-quick-guide-to-changing-bootstraps-gutter-width/
+http://mp.weixin.qq.com/wiki/2/ae9782fb42e47ad79eb7b361c2149d16.html?ptlang=2052&ADUIN=66303724&ADSESSION=1468806586&ADTAG=CLIENT.QQ.5479_.0&ADPUBNO=26582#Button   微信UI
+http://www.v2ex.com/t/143761         ReplaceGoogleCDN：将 Google CDN 替换为国内的
+
+http://www.ionic-china.com/ngCordova/Network.html   ng里的ionic
+http://bbs.ionic-china.com/read.php?tid=7&fid=4     ionic,安装node.js
+http://bbs.ionic-china.com/read-8.html  
+
+https://yq.aliyun.com/articles/57863?&utm_source=qq
+http://blog.csdn.net/lovelyelfpop/article/details/50848524
+
+
+https://zhuanlan.zhihu.com/p/21644769
+http://marcj.github.io/css-element-queries/
+http://www.cnblogs.com/TomXu/archive/2011/12/31/2289423.html
+http://www.aliued.com/?p=3176   读懂安哥拉源码
+看懂angular 的scope http://www.aliued.com/?p=3180   ***
+angular 的脏检查 http://www.ituring.com.cn/article/39865    ***
+
+https://segmentfault.com/a/1190000006140042
+
+XML 便捷操作类：http://commons.apache.org/proper/commons-configuration/index.html
+
+
+{javascript 题目：
+++[[]][+[]]+[+[]] 
+以上表达式运算结果会等于什么？
++[]=0
+++[[]][+[]] = 1
+如果是字符串拼接的话那么就是"10"，如果是数字的话那么就是1吧。
+}
+
+http://js8.in/2013/11/20/%E4%BA%94%E4%B8%AA%E4%BD%A0%E5%BF%85%E9%A1%BB%E7%9F%A5%E9%81%93%E7%9A%84javascript%E5%92%8Cweb-debug%E6%8A%80%E6%9C%AF/      调试方法
+
+https://isux.tencent.com/chrome-workspace.html
+关于chrome  的调试，我们可以映射到本地的开发环境目录让开发工具中的脚本样式自动修改到代码。
+
+http://blog.jimmylv.info/2015-11-11-what-is-really-rest/    什么才是真正的 RESTful 架构？
+
+培训内容更新连个连接:
+gulp 的教程链接 https://github.com/nimojs/gulp-book
+typescript 的教程链接 https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/Interfaces.html
+http://www.zhihu.com/question/49646794/answer/117059246   新程序员的问题,如何问问题
+
+https://github.com/json-schema-form/angular-schema-form/blob/development/docs/index.md    schema-form的使用
+
+
+https://zhuanlan.zhihu.com/p/22229868         前端学习资源
+
+9月27所记录
+使用 gulp 编译 LESS：https://github.com/nimojs/gulp-book/blob/master/chapter5.md

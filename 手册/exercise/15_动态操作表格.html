@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15_动态操作表格</title>
+    <script src="jquery-1.11.3.min.js"></script>
+    <style>
+        #data {
+            width: 600px;
+        }
+
+        #data, td, th {
+            border-collapse: collapse;
+            border: 1px solid #aaaaaa;
+        }
+
+        th, td {
+            height: 28px;
+        }
+
+        #data thead {
+            background-color: #333399;
+            color: #ffffff;
+        }
+
+        .blue {
+            background-color: #ccccff;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" id="add" value="新增">
+    <table id="data">
+        <thead>
+        <tr>
+            <th>姓名</th>
+            <th>工资</th>
+            <th>入职时间</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Tom</td>
+            <td>$3500</td>
+            <td>2010-10-25</td>
+            <td><a href="#">删除</a></td>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td>$3400</td>
+            <td>2010-12-1</td>
+            <td><a href="#">删除</a></td>
+        </tr>
+        <tr>
+            <td>King</td>
+            <td>$5900</td>
+            <td>2009-08-17</td>
+            <td><a href="#">删除</a></td>
+        </tr>
+        <tr>
+            <td>Scott</td>
+            <td>$3800</td>
+            <td>2012-11-17</td>
+            <td><a href="#">删除</a></td>
+        </tr>
+        <tr>
+            <td>Smith</td>
+            <td>$3100</td>
+            <td>2014-01-27</td>
+            <td><a href="#">删除</a></td>
+        </tr>
+        <tr>
+            <td>Allen</td>
+            <td>$3700</td>
+            <td>2011-12-05</td>
+            <td><a href="#">删除</a></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <script>
+        // 添加
+		// 1. 为id为add按钮绑定click事件
+		$("#add").click(function(){
+		// 2. 事件处理函数
+			// a. 创建<tr><td>Allen</td><td>$3700</td><td>2011-12-05</td><td><a href="#">删除</a></td></tr>
+			var $tr = $("<tr><td>Allen</td><td>$3700</td><td>2011-12-05</td><td><a href='#'>删除</a></td></tr>");
+			// b. 添加到tbody元素
+			$("#data>tbody").append($tr);
+			// c. 为新增a元素绑定click事件
+			$("a").click(moveEle);
+		});
+		
+		
+		// 删除
+		// 1. 为a元素绑定click事件
+		$("a").click(moveEle);
+
+		function moveEle(){
+		// 2. 事件处理函数
+			// a. 定位a元素所在的tr元素
+			var $tr = $(this).parent().parent();
+			// b. 调用remove()进行删除
+			$tr.remove();
+		}
+		
+	</script>
+</body>
+</html>

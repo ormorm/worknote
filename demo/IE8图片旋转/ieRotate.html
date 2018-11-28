@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>无标题文档</title>
+    <!-- <link id="change" href="" rel="stylesheet" type="text/css"> -->
+</head>
+<style>
+    .img-banner {
+        text-align: center;
+        height: 600px;
+    }
+
+    .img-btn {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="img-banner">
+        <img id="enlargeImg" src="banner.jpg" alt="">
+    </div>
+    <p class="img-btn">
+        <button onclick="rotate()">旋转</button>
+    </p>
+</body>
+<!-- <script src="jquery-1.11.1.min.js"></script> -->
+<script>
+    var num = 0;
+    function rotate() {
+        num += 1;
+        angleNum = num % 4;
+        var img = document.getElementById("enlargeImg");
+        var angle = num % 4 * 90;
+        fnRotateScale(img, angle, 1);
+    }
+    var fnRotateScale = function (dom, angle, scale) {
+        if (dom && dom.nodeType === 1) {
+            angle = parseFloat(angle) || 0;
+            scale = parseFloat(scale) || 1;
+            if (typeof (angle) === "number") {
+                //IE
+                // var rad = angle * (Math.PI / 180);
+                // var m11 = Math.cos(rad) * scale, m12 = -1 * Math.sin(rad) * scale, m21 = Math.sin(rad) * scale, m22 = m11;
+                // if (!dom.style.Transform) {
+                //     dom.style.filter = "progid:DXImageTransform.Microsoft.Matrix(M11=" + m11 + ",M12=" + m12 + ",M21=" + m21 + ",M22=" + m22 + ",SizingMethod='auto expand')";
+                // }
+                if (angle == 90) {
+                    document.getElementById("enlargeImg").style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=1)';
+                } else if (angle == 180) {
+                    document.getElementById("enlargeImg").style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2)';
+                } else if (angle == 270) {
+                    document.getElementById("enlargeImg").style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=3)';
+                } else if (angle == 0) {
+                    document.getElementById("enlargeImg").style.filter = 'progid:DXImageTransform.Microsoft.BasicImage(rotation=0)';
+                }
+                //Modern
+                dom.style.MozTransform = "rotate(" + angle + "deg) scale(" + scale + ")";
+                dom.style.WebkitTransform = "rotate(" + angle + "deg) scale(" + scale + ")";
+                dom.style.OTransform = "rotate(" + angle + "deg) scale(" + scale + ")";
+                dom.style.Transform = "rotate(" + angle + "deg) scale(" + scale + ")";
+            }
+        }
+    };
+</script>
+
+</html>

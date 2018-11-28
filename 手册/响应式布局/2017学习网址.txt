@@ -1,0 +1,13 @@
+一、1.响应式：https://github.com/marcj/css-element-queries/
+2.angular14个步骤操作:http://office.yes-soft.cn:9600/angular/tutorial
+
+
+3.响应式栅格布局，基于父元素 var requestAnimationFrame = window.requestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        function (fn) {
+            return window.setTimeout(fn, 20);
+        };
+二、1.moment （javascript日期格式化）
+http://momentjs.com/docs/#/plugins/
+2.https://juejin.im/post/58f94c9bb123db411953691b?utm_source=gold_browser_extension   （原型链）

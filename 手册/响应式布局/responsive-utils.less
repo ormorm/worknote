@@ -1,0 +1,132 @@
+.cell, .cell1, .cell2, .cell3, .cell4, .cell5, .cell100 {
+    float: left;
+    width: 100%;
+}
+
+.make-layout(@max: 5) {
+    .make-cell(1, @max);
+    .make-cell(2, @max);
+    .make-cell(3, @max);
+    .make-cell(4, @max);
+    .cell100 {
+        width: 100%;
+        .col.caption {
+            width: 35%/@max;
+        }
+        .col.content {
+            width:100% - 35%/@max;
+        }
+
+    }
+}
+
+.make-cell(@count: 1, @max)  when (@max >= @count) {
+    @cell-name: ~"cell@{count}";
+    .@{cell-name} {
+        width: percentage(@count/@max);
+        .col.caption {
+            width: 35%/@count;
+        }
+        .col.content {
+            width: 100% - 35%/@count;
+        }
+    }
+}
+
+.make-cell(@count: 1, @max)  when ( @count = 1) {
+    @cell-name: ~"cell";
+    .@{cell-name} {
+        width: percentage(@count/@max);
+    }
+}
+ 
+
+.layout-responsive.responsive-xs {
+    &.max-2 {
+        .make-layout(1);
+    }
+    &.max-3 {
+        .make-layout(1);
+    }
+    &.max-4 {
+        .make-layout(1);
+    }
+    &.max-5 {
+        .make-layout(1);
+    }
+    &.max-6 {
+        .make-layout(2);
+    }
+}
+
+.layout-responsive.responsive-sm {
+    &.max-2 {
+        .make-layout(1);
+    }
+    &.max-3 {
+        .make-layout(1);
+    }
+    &.max-4 {
+        .make-layout(1);
+    }
+    &.max-5 {
+        .make-layout(2);
+    }
+    &.max-6 {
+        .make-layout(3);
+    }
+}
+
+.layout-responsive.responsive-md {
+    &.max-2 {
+        .make-layout(2);
+    }
+    &.max-3 {
+        .make-layout(2);
+    }
+    &.max-4 {
+        .make-layout(2);
+    }
+    &.max-5 {
+        .make-layout(3);
+    }
+    &.max-6 {
+        .make-layout(4);
+    }
+}
+
+.layout-responsive.responsive-lg {
+    &.max-2 {
+        .make-layout(2);
+    }
+    &.max-3 {
+        .make-layout(2);
+    }
+    &.max-4 {
+        .make-layout(3);
+    }
+    &.max-5 {
+        .make-layout(4);
+    }
+    &.max-6 {
+        .make-layout(5);
+    }
+}
+
+.layout-responsive.responsive-xl {
+    &.max-2 {
+        .make-layout(2);
+    }
+    &.max-3 {
+        .make-layout(3);
+    }
+    &.max-4 {
+        .make-layout(4);
+    }
+    &.max-5 {
+        .make-layout(5);
+    }
+    &.max-6 {
+        .make-layout(6);
+    }
+}

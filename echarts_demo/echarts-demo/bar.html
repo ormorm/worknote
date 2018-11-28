@@ -1,0 +1,91 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<title>bar</title>
+	<meta charset="utf-8" />
+
+	<!--引入echarts.js-->
+	<script src="./echarts.min.js"></script>
+</head>
+<body>
+	<!--为echarts准备一个具备大小的DOM（宽高）-->
+	<div id="main" style="width:800px;height:500px;"></div>
+	<script type="text/javascript"> 
+		//基于准备好的DOM，初始化实例
+		var myChart = echarts.init(document.getElementById("main"));
+
+		//指定图标配置项数据
+		//bar
+		// var option = {
+		// 	//标题
+		// 	title:{
+		// 		text:"ECharts 入门示例"
+		// 	},
+		// 	//工具箱
+		// 	toolbox:{
+		// 		show:true,
+		// 		feature:{
+		// 			saveAsImage:{
+		// 				show:true
+		// 			}
+		// 		}
+		// 	},
+		// 	//图例
+		// 	legend:{
+		// 		data:['销量']
+		// 	},
+		// 	//x轴
+		// 	xAxis:{
+		// 		data:["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+		// 	},
+		// 	yAxis:{},
+		// 	//数据
+		// 	series:[{
+		// 		name:'销量',
+		// 		type:'bar',
+		// 		data:[5,20,36,10,10,20]
+		// 	}]
+		// };
+
+		//line
+		var option = {
+			//标题
+			title:{
+				text:"ECharts 入门示例"
+			},
+			//工具箱
+			toolbox:{
+				show:true,
+				feature:{
+					saveAsImage:{
+						show:true
+					}
+				}
+			},
+			//图例
+			legend:{
+				data:['销量']
+			},
+			//x轴
+			xAxis:{
+				data:["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+			},
+			yAxis:{},
+			//数据
+			series:[{
+				name:'销量',
+				type:'bar',
+				data:[5,20,36,10,10,20]
+			},
+			{
+				name:'产量',
+				type:'line',
+				data:[7,30,50,11,40,80]
+			}]
+		};
+
+		//使用刚指定的配置项和数据显示图表
+		myChart.setOption(option);
+	</script>
+</body>
+</html>

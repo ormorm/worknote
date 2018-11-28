@@ -1,0 +1,45 @@
+/* reset */
+body,nav,dl,dt,dd,p,h1,h2,h3,h4,ul,ol,li,input,button,textarea,footer{margin:0;padding:0}
+
+body{font:16px/1.5 'Microsoft Yahei','Simsun';color:#333;-webkit-text-size-adjust:none;font-size=62.5%}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+form{display:inline}
+ul,ol{list-style:none}
+a{text-decoration:none;color:#00a0e9}
+a:active,a:focus{color:#00a0e9;text-decoration:none}
+a:active{color:#fff}
+img{vertical-align:middle;border:0;-ms-interpolation-mode:bicubic;max-width:100%;}
+button,input,select,textarea{font-size:100%;vertical-align:middle;outline:none}
+textarea{resize:none}
+input{background:none}
+button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;-moz-appearance:button;}
+input:focus:-moz-placeholder,input:focus::-webkit-input-placeholder{color:transparent}
+button::-moz-focus-inner,input::-moz-focus-inner{padding:0;border:0}
+button{border:none}
+table{border-collapse:collapse;border-spacing:0}
+header,footer,article,section,nav,menu,hgroup{display:block;clear:all}
+html,body{background-color:#fff;height:100%;}
+html{margin:auto;  max-width: 640px;}
+body{margin:auto;min-width:320px;}
+strong{font-weight:normal}
+.clearfix{clear: both;}
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.clearfix:after {
+    clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+

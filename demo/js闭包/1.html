@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
+	<title>无标题文档</title>
+	<!--
+<link href="css/04home.css" rel="stylesheet" type="text/css">
+-->
+	<!-- <script src="jquery.js"></script> -->
+</head>
+<!-- <style>
+	html,body{
+		height:100%;
+		width:100%;
+	}
+</style> -->
+
+<body>
+	<div>
+		Welcome
+	</div>
+
+	<script>
+		// 这是闭包吗？确切的说并不是
+		// function foo(){
+		// 	var a=2;
+
+		// 	function bar(){
+		// 		console.log(a);//2
+		// 	}
+
+		// 	bar();
+		// }
+		// foo();
+
+		// 清晰的闭包
+		// function foo(){
+		// 	var a=2;
+
+		// 	function bar(){
+		// 		console.log(a);//2
+		// 	}
+
+		// 	return bar;
+		// }
+		// var baz=foo();
+		// baz();//2  这就是闭包的效果
+
+		//这也是闭包
+		// function foo() {
+		// 	var a = 2;
+
+		// 	function baz() {
+		// 		console.log(a);//2
+		// 	}
+
+		// 	bar(baz);
+		// }
+		// function bar(fn) {
+		// 	fn();//妈呀，快看呀，这就是闭包
+		// }
+		// foo();//2
+
+		//间接传递函数
+		// var fn;
+		// function foo() {
+		// 	var a = 2;
+
+		// 	function baz() {
+		// 		console.log(a);//2
+		// 	}
+
+		// 	fn = baz;//将baz分配给全局变量
+		// }
+		// function bar() {
+		// 	fn();//妈呀，快看呀，这就是闭包
+		// }
+		// foo();
+		// bar();//2
+
+
+		//定时器
+		// function wait(message) {
+		// 	setTimeout(function timer() {
+		// 		console.log(message);
+		// 	}, 1000);
+		// }
+		// wait("Hello,closure!");
+
+		//严格来讲，这不是闭包
+		// var a = 2;
+		// (function IIFE() {
+		// 	console.log(a);
+		// })();
+
+		//循环和闭包
+		// for (var i = 1; i <= 5; i++) {
+		// 	setTimeout(function timer() {
+		// 		console.log(i);
+		// 	}, i * 1000);
+		// }//输出5次6
+
+		// for (var i = 1; i <= 5; i++) {
+		// 	(function () {
+		// 		setTimeout(function timer() {
+		// 			console.log(i);
+		// 		}, i * 1000);
+		// 	})();
+		// }//输出5次6
+
+		// for (var i = 1; i <= 5; i++) {
+		// 	(function () {
+		// 		var j = i;
+		// 		setTimeout(function timer() {
+		// 			console.log(j);
+		// 		}, j * 1000);
+		// 	})();
+		// }//输出1,2,3,4,5
+		// for (var i = 1; i <= 5; i++) {
+		// 	(function (j) {
+		// 		setTimeout(function timer() {
+		// 			console.log(j);
+		// 		}, j * 1000);
+		// 	})(i);
+		// }//输出1,2,3,4,5
+
+		// for (var i = 1; i <= 5; i++) {
+		// 	let j = i;
+		// 	setTimeout(function timer() {
+		// 		console.log(j);
+		// 	}, j * 1000);
+		// }//输出1,2,3,4,5
+		// for (let i = 1; i <= 5; i++) {
+		// 	setTimeout(function timer() {
+		// 		console.log(i);
+		// 	}, i * 1000);
+		// }//输出1,2,3,4,5
+
+		//异步Ajax请求
+		// const self = this;
+		// const promise = new Promise(function (resolve, reject) {
+		// 	//通过参数获取编码值-分钟统计配置
+		// 	lib.trainSysParaGet({ paraname: "minuteStatistics", data: {} }).then((data) => {
+		// 		console.log('trainSysParaGet-data', data);
+		// 		self.setState({
+		// 			minutes: data.data
+		// 		});
+		// 		resolve(data.data);
+		// 	}, (err) => {
+		// 		console.log('trainSysParaGet-err', err);
+		// 		reject(err);
+		// 	});
+		// });
+		// promise.then((val) => {
+		// 	console.log("val", val);
+		// 	this.getCuttentTime = setInterval(this.output, val * 60000);
+		// });
+
+		// var funcs = [];
+		// for (let i = 0; i < 10; i++) {
+		// 	funcs.push(function () {
+		// 		console.log(i);
+		// 	});
+		// }
+		// funcs.forEach(function (func) {
+		// 	func();
+		// });
+
+		const arr=[1,2,3,4,5];
+		// const newArr=arr.slice(-3,-1);
+		// console.log(arr.splice(2,2,7,7,7));
+		console.log(...arr);
+		console.log(Math.max(...[14,3,77]));
+	</script>
+</body>
+
+</html>

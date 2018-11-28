@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
+	<title>无标题文档</title>
+	<!--
+<link href="css/04home.css" rel="stylesheet" type="text/css">
+-->
+	<script src="jquery-1.11.1.min.js"></script>
+</head>
+<style>
+	html,
+	body {
+		height: 100%;
+		width: 100%;
+	}
+</style>
+
+<body>
+	<div>
+		<textarea name="ss" id="t1" style="resize:none;width:200px;height:600px;line-height:20px;" placeholder="请输入文本内容"></textarea>
+	</div>
+	<!-- <iframe src="http://www.alloyteam.com/nav/" width="100%" height="100%" frameborder="0">
+          您的浏览器不支持iframe，请升级
+        </iframe> -->
+	<script>
+		/*IE8,textarea字数限制*/
+		$("#t1").on("input propertychange", function () {
+			var $this = $(this),
+				_val = $this.val();
+			if (_val.length > 50) {
+				$this.val(_val.substring(0, 50));
+			}
+		});
+	</script>
+</body>
+
+</html>

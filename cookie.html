@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
+	<title>无标题文档</title>
+	<!--
+<link href="css/04home.css" rel="stylesheet" type="text/css">
+-->
+	</style>
+</head>
+
+<body>
+	<script>
+		//用火狐浏览器
+		// 设置cookie
+		function setCookie(name, value, iDay) {
+			var oDate = new Date();
+			oDate.setDate(oDate.getDate() + iDay);
+			document.cookie = name + "=" + value + ";expires = " + oDate;
+		}
+		//获取cookie
+		function getCookie(name) {
+			var arr = document.cookie.split(";");
+			for (var i = 0; i < arr.length; i++) {
+				var arr2 = arr[i].split("=");
+				if (arr2[0] == name) {
+					return arr2[1];
+				}
+			}
+			return '';
+		}
+		setCookie("orm", "hahhaa", 365);
+		setCookie("password", "123456", 14);
+		// alert(document.cookie);
+		// alert(getCookie("orm"));
+		// alert(getCookie("password"));
+		// 删除cookie
+		function removeCookie(name) {
+			setCookie(name, 1, -1);
+		}
+		removeCookie("orm");
+		removeCookie("password");
+		// alert(document.cookie);
+
+		function callSomeFunction(someFunction, someArgument) {
+			return someFunction(someArgument);
+		}
+		function add10(num) {
+			return num + 10;
+		}
+		var result1 = callSomeFunction(add10, 10);
+		alert(result1);
+	</script>
+</body>
+
+</html>

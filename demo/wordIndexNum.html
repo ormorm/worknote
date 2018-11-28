@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>无标题文档</title>
+</head>
+
+<body>
+    <script>
+        const str = `
+        is a library that aims to make application side effects (i.e. asynchronous things like data fetching and impure things like accessing the browser cache) easier to manage, more efficient to execute, simple to test, and better at handling failures.
+
+The mental model is that a saga is like a separate thread in your application that's solely responsible for side effects. \`redux-saga\` is a redux middleware, which means this thread can be started, paused and cancelled from the main application with normal redux actions, it has access to the full redux application state and it can dispatch redux actions as well.
+
+    `;
+
+        const findWordAmount = (article) => {
+            const cache = {};
+            const arrStr = article.match(/[a-z]+[\-\']?[a-z]*/ig);
+            arrStr.map(val => {
+                if (val in cache) {
+                    cache[val] += 1;
+                } else {
+                    cache[val] = 1;
+                }
+            });
+            Object.entries(cache).map(val => {
+                const [word, number] = val;
+                console.log(`单词${word}出现了${number}次`);
+            })
+        }
+
+        findWordAmount(str);
+    </script>
+</body>
+
+</html>

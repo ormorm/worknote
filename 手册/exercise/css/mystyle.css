@@ -1,0 +1,76 @@
+/*离线字体*/
+ @font-face {
+     font-family: "H";
+     src: url(../fonts/Hind-Regular.ttf);
+ }
+@font-face {
+    font-family: "R";
+    src: url(../fonts/RobotoSlab-Regular.ttf);
+}
+
+/*about*/
+.about,.about1{
+    background-color: #f9f9f9;}
+.about h1,.about1 h1{ font-family: "R"; font-size: 3em;
+    padding-top: 60px; }
+.about p,.about1 p{ font-family: "H"; }
+.about .lead,.about1 .lead{ font-size: 1.2em;
+    line-height: 2em;
+    padding:0 290px;
+}
+.about h1,.about1 h1{
+    margin-bottom: 7px;
+}
+/*baout1*/
+img.img-about1{width:100%;}
+@media (max-width: 1200px) {
+    .about .lead,.about1 .lead {
+        padding: 0 190px;
+    }
+}
+@media (max-width: 992px) {
+    .about .lead,.about1 .lead {
+        padding: 0 130px;
+    }
+}
+@media (max-width: 768px) {
+    .about .lead,.about1 .lead {
+        padding: 0  84px;
+    }
+}
+@media (max-width: 640px) {
+    .about .lead,.about1 .lead {
+        padding: 0px;
+    }
+}
+@media (max-width: 480px) {
+    .about .lead,.about1 .lead {
+        padding: 0px;
+    }
+
+    .col-xxs-12{
+        width:100%;
+    }
+    .about1 .col-xxs-12{
+        width:50%;
+    }
+}
+@media (max-width: 360px) {
+    .about .lead,.about1 .lead {
+        padding: 0px;
+    }
+}
+@media (max-width: 320px) {
+    .about .lead,.about1 .lead {
+        padding: 0px;
+    }
+    .about1 .col-xxs-12{
+        width:100%;
+    }
+}
+
+
+
+
+
+

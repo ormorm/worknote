@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+		<title>Mobile Cookbook</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+		#someElm {
+			width: 100px;
+			height: 100px;
+			background:#ccc;
+			position:absolute;
+		}
+		</style>
+  </head>
+  <body>
+    <header>
+    </header>
+		<div id="main">
+			<div id="someElm">
+			</div>
+		</div>
+    <footer>
+    </footer>
+	<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+	<script>
+	$('#someElm').bind('touchmove',function(e){
+	e.preventDefault();
+		var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+		var elm = $(this).offset();
+		var x = touch.pageX - elm.left/2;
+		var y = touch.pageY - elm.top/2;
+		$(this).css('left', x+'px');
+		$(this).css('top', y+'px');
+		console.log(touch.pageY+' '+touch.pageX);  
+	});
+	</script>
+	</body>
+</html>
+	
+
+
+ 

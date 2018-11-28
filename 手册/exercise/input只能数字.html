@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>input数字格式化</title>
+	<meta charset="utf-8" />
+  <script src="jquery-1.11.3.min.js"></script><!-- 注意修改引用路径 -->
+  <script src="autoNumeric.js"></script><!-- 注意修改引用路径 -->
+</head>
+
+<body>
+    <div>
+        <input class="input1" type="text" value="1">
+        <input class="input1" type="text" value="1"><input class="input1" type="text" value="1"><input class="input1" type="text" value="1"><input class="input1" type="text" value="1">
+    </div>
+
+    <div>   
+        <input id="#div1" type="text" value="1">
+    </div>
+    <script>
+    function numeric(txt){
+        txt['autoNumeric']('init',{ vMin:0,vMax:99999999,aPad:false});
+        txt.each(function(){
+            $(this).on("keyup",function(){
+                var current=$(this);
+                var contentLen = current.val().length;
+                if(contentLen==1&&current.val()==0){
+                    current.val(1);
+                }
+            });
+            $(this).on("blur",function(){
+                var current=$(this);
+                if(current.val()==0){
+                    current.val(1);
+                }
+            });
+        });
+    }
+    numeric($(".input1"));
+
+    // function numerics(txt){
+    //     txt['autoNumeric']('init',{ vMin:0,vMax:99999999,aPad:false});
+    //     txt.on("keyup",function(){
+    //         var contentLen = txt.val().length;
+    //         if(contentLen==1&&txt.val()==0){
+    //             txt.val(1);
+    //         }
+    //     });
+    //     txt.on("blur",function(){
+    //         if(txt.val()==0){
+    //             txt.val(1);
+    //         }
+    //     });
+    // }
+    // numerics($("#div1"));
+    </script>
+</body>
+</html>

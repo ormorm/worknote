@@ -1,0 +1,35 @@
+html,body{
+	font-size: 18px;
+	color: #13384e;
+}
+body,html,p,div,h2,h3{
+	margin: 0;
+	padding: 0;
+}
+h3{
+	margin: 6px 0;
+}
+p{
+	margin: 6px 0 18px 0;
+}
+h2{
+	font-size: 20px;
+}
+h3{
+	font-size: 18px;
+}
+.container{
+	padding: 14px;
+}
+.text-indent{
+	text-indent: 36px;
+}
+.text-center{
+	text-align: center;
+}
+.text-right{
+	text-align: right;
+}
+.bottom-margin{
+	margin-bottom: 6px;
+}

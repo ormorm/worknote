@@ -1,0 +1,58 @@
+*{
+    margin:0;
+    padding:0;
+}
+.training-header{
+	height:240px;
+	width:100%;
+	// background:url("../imgages/banner.jpg") no-repeat 0 0;
+	background-size: cover;
+	position:relative;
+}
+$width:100px;
+.play{
+	// width:90px;
+	// height:90px;
+	margin-top:-$width/2;
+	margin-left:-$width/2;
+	position:absolute;
+	top:50%;
+	left:50%;
+	z-index:99;
+	// background:url("../images/play.png") no-repeat 0 0;
+	// background-size:100% 100%;
+}
+.training-content{
+	padding:40px 30px 30px 30px;
+	letter-spacing:1px;
+	line-height:30px;
+	.title{
+		color: #666;
+		overflow: hidden;
+		.lf{
+			float: left;
+		}
+		.rt{
+			float: right;
+		}
+	}
+	.prompt{
+		overflow: hidden;
+		margin-top: 20px;
+		.lf{
+			width:30%;
+			float: left;
+			color: #10cc10;
+		}
+		.rt{
+			width:70%;
+			float: right;
+		}
+	}
+	.produce{
+		margin-top: 30px;
+		.produce-content{
+			text-indent:30px;
+		}
+	}
+}

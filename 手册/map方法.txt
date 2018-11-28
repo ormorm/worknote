@@ -1,0 +1,15 @@
+[1,2,3].map(function(a){return new Date(a)})
+输出三个对应的:[Thu Jan 01 1970 08:00:00 GMT+0800 (中国标准时间), Thu Jan 01 1970 08:00:00 GMT+0800 (中国标准时间), Thu Jan 01 1970 08:00:00 GMT+0800 (中国标准时间)]
+
+
+一.[1,2,3].map(function(a){return a*2})
+输出:[2, 4, 6]
+
+二.var data =[{bdate:465555454}].map(function(a){a.bdate= new Date( a.bdate);return a })
+data
+输出 [Objectbdate: Tue Jan 06 1970 17:19:15 GMT+0800 (中国标准时间)__proto__: Object]
+JSON.stringify(data)
+输出(转成字符串格式):"[{"bdate":"1970-01-06T09:19:15.454Z"}]"
+
+三.[{bdate:11111}].map(function(a){  a.bdate = new Date(a.bdate); return a})
+输出:[Objectbdate: Thu Jan 01 1970 08:00:11 GMT+0800 (中国标准时间)__proto__: Objectconstructor: Date()getDate: getDate()getDay: getDay()getFullYear: getFullYear()getHours: getHours()getMilliseconds: getMilliseconds()getMinutes: getMinutes()getMonth: getMonth()getSeconds: getSeconds()getTime: getTime()getTimezoneOffset: getTimezoneOffset()getUTCDate: getUTCDate()getUTCDay: getUTCDay()getUTCFullYear: getUTCFullYear()getUTCHours: getUTCHours()getUTCMilliseconds: getUTCMilliseconds()getUTCMinutes: getUTCMinutes()getUTCMonth: getUTCMonth()getUTCSeconds: getUTCSeconds()getYear: getYear()setDate: setDate()setFullYear: setFullYear()setHours: setHours()setMilliseconds: setMilliseconds()setMinutes: setMinutes()setMonth: setMonth()setSeconds: setSeconds()setTime: setTime()setUTCDate: setUTCDate()setUTCFullYear: setUTCFullYear()setUTCHours: setUTCHours()setUTCMilliseconds: setUTCMilliseconds()setUTCMinutes: setUTCMinutes()setUTCMonth: setUTCMonth()setUTCSeconds: setUTCSeconds()setYear: setYear()toDateString: toDateString()toGMTString: toUTCString()toISOString: toISOString()toJSON: toJSON()toLocaleDateString: toLocaleDateString()toLocaleString: toLocaleString()toLocaleTimeString: toLocaleTimeString()toString: toString()toTimeString: toTimeString()toUTCString: toUTCString()valueOf: valueOf()Symbol(Symbol.toPrimitive): [Symbol.toPrimitive]()__proto__: Object__proto__: Object__defineGetter__: __defineGetter__()__defineSetter__: __defineSetter__()__lookupGetter__: __lookupGetter__()__lookupSetter__: __lookupSetter__()constructor: Object()hasOwnProperty: hasOwnProperty()isPrototypeOf: isPrototypeOf()propertyIsEnumerable: propertyIsEnumerable()toLocaleString: toLocaleString()toString: toString()valueOf: valueOf()get __proto__: __proto__()set __proto__: __proto__()]

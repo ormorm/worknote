@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <title>first.fm</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/modernizr.custom.54685.js"></script>
+    <style>
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Your Location</h1>
+    </header>
+    <div id="main">
+      Your Geo Location is: <span id="geo"></span>
+    </div>
+    <footer>
+      
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.js"></script>
+    <script>
+      yepnope({
+        test : Modernizr.geolocation,
+        nope : ['js/geolocation.js'],
+        complete: function () {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            document.getElementById('geo').innerHTML = position.coords.latitude+", "+position.coords.longitude;
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
+
+
+ 

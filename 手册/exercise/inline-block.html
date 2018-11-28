@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>test-</title>
+	<meta charset="utf-8" />
+  <style>
+      .inline-block{
+        display: inline-block;
+        width: 60px;
+        height: 30px;
+        border: 1px solid red;
+      }
+  </style>
+  <script src="jquery-1.11.3.min.js"></script><!-- 注意修改引用路径 -->
+	 <script>
+$(document).ready(function(){
+
+   // $("#content").keyup(function(){
+   //       var length = 100;
+   //       var content_len = $("#content").val().length;
+   //       var in_len = length-content_len;
+        
+   //       // 当用户输入的字数大于制定的数时，让提交按钮失效
+   //       // 小于制定的字数，就可以提交
+   //       if(in_len >=0){
+   //          $("#result").html('您还可以输入'+in_len+'字');
+   //          $("#currentWord").html(content_len);
+   //          // $("#btn").attr("disabled",false);
+   //          // 可以继续执行其他操作
+   //       }else if(in_len<0){
+   //          $("#content").val($("#content").val().substring(0,100));
+   //          $("#result").html('您还可以输入0字');
+   //       }
+   //       else{
+   //          $("#result").html('您还可以输入'+in_len+'字');
+   //          $("#btn").attr("disabled",true);
+   //          return false;
+   //       }
+   //  });
+      $("#content").on("input propertychange",function(){
+        var length = 20;
+         var content_len = $("#content").val().length;
+         var in_len = length-content_len;
+        
+         // 当用户输入的字数大于制定的数时，让提交按钮失效
+         // 小于制定的字数，就可以提交
+         if(in_len >=0){
+            $("#result").html('您还可以输入'+in_len+'字');
+            $("#currentWord").html(content_len);
+            // $("#btn").attr("disabled",false);
+            // 可以继续执行其他操作
+         }else if(in_len<0){
+            $("#content").val($("#content").val().substring(0,20));
+            $("#result").html('您还可以输入0字');
+         }
+         else{
+            $("#result").html('您还可以输入'+in_len+'字');
+            $("#btn").attr("disabled",true);
+            return false;
+         }
+      });
+   });
+ 
+</script>
+</head>
+
+<body>
+    <div id="result">您还可以输入100字</div>
+    <div><span id="currentWord">0</span>/<span>100</span></div>
+    <textarea name="content" id="content" cols="80" rows="5"></textarea><br />
+    <input type="button" name="btn" value="提交" id="btn" />
+
+  <div>
+    <span class="inline-block">美丽</span>
+    <span class="inline-block">美丽</span>
+    <span class="inline-block">美丽</span>
+    <span class="inline-block">美丽</span>
+  </div>
+    
+</body>
+
+
+</html>

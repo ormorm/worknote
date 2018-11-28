@@ -1,0 +1,22 @@
+1、
+  1. git init
+  2. git add .
+  3. git commit -m “init”
+  4. git remote add origin https://github.com/hongxinzz/blog.git
+  5. git push --set-upstream origin master
+
+2、React数组双重遍历：
+	{
+value.serviceTypes.map((item, key) =>
+<Tag key={key}>{item}</Tag>
+)
+}
+3、React教程***
+  http://huziketang.com/books/react/lesson17
+	他第三阶段好像要收费我买了 邮箱：510348414@qq.com  阅读码： i7pNa5aWap
+4、React数组双重遍历：
+	{
+value.serviceTypes.map((item, key) =>
+<Tag key={key}>{item}</Tag>
+)
+}

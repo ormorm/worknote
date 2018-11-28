@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>WebSocket 客户端</title>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <input type="button" id="btnConnection1" value="连接课程码" />
+            <input type="button" id="btnClose1" value="关闭" />
+            <input type="button" id="btnSend1" value="发送" />
+        </div>
+		
+		 <div>
+            <input type="button" id="btnConnection2" value="连接签到人员" />
+            <input type="button" id="btnClose2" value="关闭" />
+            <input type="button" id="btnSend2" value="发送" />
+        </div>
+		
+				 <div>
+            <input type="button" id="btnConnection3" value="连接学员答题情况" />
+            <input type="button" id="btnClose3" value="关闭" />
+            <input type="button" id="btnSend3" value="发送" />
+        </div>
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript">
+            var socket1;
+			var socket2;
+			var socket3;
+            if(typeof(WebSocket) == "undefined") {
+                alert("您的浏览器不支持WebSocket");
+            }
+
+            $("#btnConnection1").click(function() {
+                //实现化WebSocket对象，指定要连接的服务器地址与端口
+                socket1 = new WebSocket("ws://localhost:8888/train-sys/ws-course-code?classID=2");
+                //打开事件
+                socket1.onopen = function() {
+                    alert("Socket 已打开");
+                    //socket.send("这是来自客户端的消息" + location.href + new Date());
+                };
+                //获得消息事件
+                socket1.onmessage = function(msg) {
+				if(msg.data!="0"){
+					//alert(msg.data);
+					console.log(msg.data)
+				}else{
+				alert("找不到相关的班级信息！");
+				}
+				  
+                };
+                //关闭事件
+                socket1.onclose = function() {
+                    alert("Socket已关闭");
+                };
+                //发生了错误事件
+                socket1.onerror = function() {
+                    alert("发生了错误");
+                }
+            });
+            
+            //发送消息
+            $("#btnSend1").click(function() {
+                socket1.send("这是来自客户端的消息" + location.href + new Date());
+            });
+            
+            //关闭
+            $("#btnClose1").click(function() {
+                socket1.close();
+            });
+			
+			
+			$("#btnConnection2").click(function() {
+                //实现化WebSocket对象，指定要连接的服务器地址与端口
+                socket2 = new WebSocket("ws://localhost:8888/train-sys/ws-stu-sign?&classID=17");
+                //打开事件
+                socket2.onopen = function() {
+                    alert("Socket 已打开");
+                    //socket.send("这是来自客户端的消息" + location.href + new Date());
+                };
+                //获得消息事件
+                socket2.onmessage = function(msg) {
+				if(msg.data!="0"){
+					//alert(msg.data);
+					console.log(msg.data)
+				}else{
+					alert("找不到相关的班级信息！");
+				}
+				  
+                };
+                //关闭事件
+                socket2.onclose = function() {
+                    alert("Socket已关闭");
+                };
+                //发生了错误事件
+                socket2.onerror = function() {
+                    alert("发生了错误");
+                }
+            });
+            
+            //发送消息
+            $("#btnSend2").click(function() {
+                socket2.send("这是来自客户端的消息" + location.href + new Date());
+            });
+            
+            //关闭
+            $("#btnClose2").click(function() {
+                socket2.close();
+            });
+			
+			$("#btnConnection3").click(function() {
+                //实现化WebSocket对象，指定要连接的服务器地址与端口
+                socket3 = new WebSocket("ws://localhost:8888/train-sys/ws-stu-answer?classID=1");
+                //打开事件
+                socket3.onopen = function() {
+                    alert("Socket 已打开");
+                    //socket.send("这是来自客户端的消息" + location.href + new Date());
+                };
+                //获得消息事件
+                socket3.onmessage = function(msg) {
+				if(msg.data!="0"){
+				    //alert(msg.data);
+					console.log(msg.data)
+				}else{
+					alert("找不到相关的班级信息！");
+				}
+				  
+                };
+                //关闭事件
+                socket3.onclose = function() {
+                    alert("Socket已关闭");
+                };
+                //发生了错误事件
+                socket3.onerror = function() {
+                    alert("发生了错误");
+                }
+            });
+            
+            //发送消息
+            $("#btnSend3").click(function() {
+                socket3.send("这是来自客户端的消息" + location.href + new Date());
+            });
+            
+            //关闭
+            $("#btnClose3").click(function() {
+                socket3.close();
+            });
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,23 @@
+1、https://github.com/taoveweb/reactTemplate
+2、https://developer.mozilla.org/zh-CN/  这是js基础比较好的文档
+3、https://haoqicat.com/http-with-peter  视频-跟 Peter 学 HTTP
+4、http://www.maiziedu.com/search/course/react-1/  react视频    zhenhappy 12121212
+5、https://github.com/JacksonTian/fks  这是前端知识大全想少活几年就多看些
+6、react教程（文档）https://doc.react-china.org/
+7、
+http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html     Flex 布局教程：语法篇
+8、
+https://github.com/github/fetch   （fetch）
+
+9、http://www.w3school.com.cn/ajax/index.asp  （xmlhttprequest
+）
+10、
+https://github.com/facebookincubator/create-react-app  （创建app）
+11、https://reacttraining.com/react-router/web/example/basic  （react路由）
+12、https://github.com/stoeffel/react-motion-drawer   抽屉组件
+13、
+https://pro.ant.design/docs/router-and-nav-cn     开发文档（antd PRO）
+
+http://www.imooc.com/article/16082
+
+https://github.com/tsrot/study-notes/blob/master/React%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%B1%87%E6%80%BB.md

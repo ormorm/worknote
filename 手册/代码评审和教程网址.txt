@@ -1,0 +1,68 @@
+代码评审：http://192.168.50.90/
+代码评审教程：http://office.yes-soft.cn:8090/tutorial-server/resources/index.html#/tutorial/docs?name=started%2Fcode-review
+
+http://office.yes-soft.cn:8090/tutorial-server/resources/index.html#/tutorial/md?name=started%2Fcode-review%2Findex.md
+
+登陆使用：demo  demo
+
+
+测试新建 svn使用： https://oa.yes-soft.cn:8443/svn/codes
+
+新的 SVN 代码仓库创建规则 拟定如下：
+
+项目目录创建规则
+
+- 所有项目源代码 必须在 https://oa.yes-soft.cn:8443/svn/root 下
+- 公司自有项目的目录规则为 https://oa.yes-soft.cn:8443/svn/root/yes-{项目名}
+- 客户项目 https://oa.yes-soft.cn:8443/svn/root/{客户名称}/{项目名}
+
+项目内部源代码目录规则
+
+- xxx/{项目名}/frontend 前端项目源码
+- xxx/{项目名}/backend 后端项目源码
+- xxx/{项目名} 纯前端／后端的项目省略 frontend /backend
+
+示例
+
+- https://oa.yes-soft.cn:8443/svn/root/yes-design
+- https://oa.yes-soft.cn:8443/svn/root/yes-base
+
+
+
+
+后端：192.168.50.23   教程文档
+https://oa.yes-soft.cn:8443/svn/base62
+https://downloads.mariadb.org/
+
+svn 提交过滤：
+Window -> Preferences -> Team -> Ignored Resources   过滤.project、.settings、.classpath等资源文件
+
+下载最新版eclipse:
+http://www.eclipse.org/downloads/eclipse-packages 
+安装完后,File->Import->Install->From Exist Installation，选择旧的Eclipse安装文件夹，可以把插件迁移过来.
+其他的设置存储在workspace里,不需要再进行处理
+
+
+svn 文件与目录过滤：
+.settings
+.settings/*
+target
+target/*
+.classpath
+.project
+.externalToolBuilders
+.externalToolBuilders/*
+
+
+
+解决properties中文乱码问题：
+Window -> Preferences -> General-> Content Types->右侧Text—>下面 Java Properties File    =>最下面编码改为UTF-8
+
+http://yishi-server.wicp.net/panda_points_1_0_0_wyf/resources/mobile/index.html?code=001AkJKH0IRhCj2Z6fMH0OURKH0AkJKk&state=STATE#/home
+
+
+http://192.168.50.23/index.do
+
+
+
+

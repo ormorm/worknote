@@ -1,0 +1,38 @@
+.training-content {
+  padding: 40px 30px 30px 30px;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+.training-content .title {
+  color: #666;
+  overflow: hidden;
+}
+.training-content .title .lf {
+  float: left;
+}
+.training-content .title .rt {
+  float: right;
+}
+.training-content .prompt {
+  overflow: hidden;
+  margin-top: 20px;
+}
+.training-content .prompt .lf {
+  width: 30%;
+  float: left;
+  color: #10cc10;
+}
+.training-content .prompt .rt {
+  width: 70%;
+  float: right;
+}
+.training-content .produce {
+  margin-top: 30px;
+}
+.training-content .produce .produce-content {
+  text-indent: 30px;
+  font-size: 20px;
+  font-family: Arial;
+  font-style: italic;
+  color: #000;
+}

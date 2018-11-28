@@ -1,0 +1,67 @@
+NodeJS https://nodejs.org/zh-cn/ 请选择长效版本。
+VSCode https://code.visualstudio.com/
+VSCode 使用教程 http://i5ting.github.io/vsc/
+TortoiseSVN https://tortoisesvn.net/downloads.html
+Git https://git-scm.com/download/
+
+chrome 跨域调试技巧
+
+Mac 下
+open -a "Google Chrome" --args --disable-web-security --user-data-dir=
+Windows 下
+chrome.exe --disable-web-security --user-data-dir=
+
+
+移动端调试工具
+
+gap debug http://www.genuitec.com/products/gapdebug/download/
+
+Ftp 管理工具
+
+FILEZILLA https://www.filezilla.cn/download/client
+
+
+
+
+简单的命令行Web服务 http-server
+
+详情 https://www.npmjs.com/package/http-server
+安装
+npm install http-server -g
+使用 (请在需要调试的网页工作目录如 e:/workspace)
+http-server -p 9000
+
+
+
+
+
+
+
+
+命令行
+
+npm (node package management) 包管理私服
+
+访问 http://192.168.50.67:7002 可以查询包
+
+npm set registry http://192.168.50.67:7001
+安装 shell 工具, 安装前需要安装 Nodejs 开发环境, 参见框架介绍的开发环境.
+
+npm install yes-cli gulp typescript -g --verbose
+创建项目 一个项目: 例 example
+
+命令行格式 new 共两个参数 为 desktop 或者 mobile; 为要创建的项目名字.
+
+ys new desktop example
+进入项目目录
+
+cd example
+安装 npm 模块包
+
+npm install
+构建项目 build
+
+gulp
+启动运行项目
+
+gulp serve
